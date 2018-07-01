@@ -3,6 +3,7 @@ const app=express();
 const fs=require('fs');
 const hbs=require('hbs');
 
+const port=process.env.PORT || 3000;
 /* telling express what view engine we are going to use in ou case HandleBars or hbs for short*/
 app.set('view engine','hbs');
 
@@ -46,7 +47,7 @@ app.get('/about',(req,res)=>{
     res.render('about.hbs');
 })
 
-app.listen(3000);
+app.listen(port);
 console.log('listening at port 3000');
 
 
