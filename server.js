@@ -29,7 +29,10 @@ app.use(express.static(__dirname+'/public'));
 /*doin something each time a request is made */
 app.use((req,res,next)=>{
     var now=new Date().toString();
-fs.appendFile('./logger.txt',now);
+fs.appendFile('./logger.txt',now,(error)=>{
+    console.log(error);
+});
+next();
 })
 /*routing*/
 app.get('/',(req,res)=>{
