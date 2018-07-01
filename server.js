@@ -19,9 +19,9 @@ hbs.registerHelper('getCurrentYear',()=>{
 /*use is a built in middleware of express if next() is not called from the method that is passed as argument to use
 than no further matching of url takes place this might be helpful when we want to show some maintainance
 message to user and no further routes work */
-app.use((req,res,next)=>{
-    res.render('maintainance.hbs')
-})
+// app.use((req,res,next)=>{
+//     res.render('maintainance.hbs')
+// })
 /*to make the server know about our static files like js and css we use middleware again and this time telling
 express where to look for the static files*/
 app.use(express.static(__dirname+'/public'));
