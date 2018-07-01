@@ -51,18 +51,4 @@ app.get('/about',(req,res)=>{
 })
 
 app.listen(port);
-console.log('listening at port 3000');
 
-
-/*                     Node.js creating server (reason why we use epress)              */
-// const http=require('http');
-// var server=http.createServer((req,res)=>{
-//     console.log(req.url)
-//     if(req.url==='/')
-//     {res.writeHead(200,{'Content-Type':'application/json'});
-//     res.end(JSON.stringify({name:'ashu'}));
-//     }
-// });
-// server.listen(3000)
-
-// console.log('listening at port 3000');
